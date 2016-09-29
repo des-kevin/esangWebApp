@@ -5,3 +5,20 @@
  * 
  */
 
+var esController = (function(ctrl,eobj){
+    
+    ctrl.prototype = Object.create(eobj);
+    
+    ctrl.getRoute=function(url){
+        
+    };
+    
+    ctrl.gotoUrl=function(url){
+        
+    };
+    
+    ctrl.gotoView=function(viewName){};
+    
+    
+    return ctrl;
+}(esController || {},esObject || {}));
