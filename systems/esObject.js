@@ -5,19 +5,27 @@
  * 
  */
 
+define([
+    "order!library/jquery/jquery.js",
+    'order!library/underscore/wrapper.js',
+    "order!library/backbone/wrapper.js",
+], function ($, _, Backbone){
+    
 
-var esObject=(function(obj){
+        var esObject=window.esObject=function(obj){
     
-    //obj.prototype=Object.create(backbone);
-    obj.set = function(k,v){
-        if(obj.hasOwnProperty(k) && typeof obj != "function")
-            obj[k]=v;
-    };
-    obj.get=function(k){
-        if(obj.hasOwnProperty(k)  && typeof obj != "function")
-            return obj[k];
-    };
-    
-    return obj;
-})(esObject || {});
+            obj.prototype=Object.create(Backbone);
+            obj.set = function(k,v){
+                if(obj.hasOwnProperty(k) && typeof obj != "function")
+                    obj[k]=v;
+            };
+            obj.get=function(k){
+                if(obj.hasOwnProperty(k)  && typeof obj != "function")
+                    return obj[k];
+            };
+
+            return obj;
+        };
+        return esObject;
+});
 
