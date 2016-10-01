@@ -8,24 +8,21 @@
 define([
     "order!systems/esObject.js"
 ],
-function(){
+function(obj){
     
-    var esController = window.esController = function(ctrl){
-        
-            ctrl.prototype = Object.create(esObject);
-            ctrl.getRoute=function(url){
+    var esController = window.esController = {};
+    
+            esController = obj._.extend(esController,obj);
+    
+            esController.getRoute=function(url){
 
             };
 
-            ctrl.gotoUrl=function(url){
+            esController.gotoUrl=function(url){
 
             };
 
-            ctrl.gotoView=function(viewName){};
-    
-        return ctrl;
-    };
-    
+            esController.gotoView=function(viewName){};
     
     
     return esController;

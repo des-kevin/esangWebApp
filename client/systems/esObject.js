@@ -12,20 +12,21 @@ define([
 ], function ($, _, Backbone){
     
 
-        var esObject=window.esObject=function(obj){
+        var esObject=window.esObject= {};
+        
+        esObject = _.extend(esObject, Backbone); 
+        
+        esObject._ = _;
     
-            obj.prototype=Object.create(Backbone);
-            obj.set = function(k,v){
-                if(obj.hasOwnProperty(k) && typeof obj != "function")
-                    obj[k]=v;
+        esObject.set = function(k,v){
+                if(esObject.hasOwnProperty(k) && typeof esObject != "function")
+                    esObject[k]=v;
             };
-            obj.get=function(k){
-                if(obj.hasOwnProperty(k)  && typeof obj != "function")
-                    return obj[k];
+            esObject.get=function(k){
+                if(esObject.hasOwnProperty(k)  && typeof esObject != "function")
+                    return esObject[k];
             };
 
-            return obj;
-        };
         return esObject;
 });
 

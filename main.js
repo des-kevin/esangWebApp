@@ -23,8 +23,10 @@ require([
 
 //
 require([
-    "order!systems/esController.js",
-],function(esController){
+    //"order!systems/esController.js",
+    "order!systems/esView.js",
+    
+],function(esView){
     console.log(" EMS 啟動！ ");
     
     
