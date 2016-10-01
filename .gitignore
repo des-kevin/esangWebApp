@@ -3,3 +3,5 @@
 log/*.log
 
 /nbproject/private/
+/bower_components/
+/node_modules/
