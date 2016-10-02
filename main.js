@@ -13,7 +13,7 @@ esangMgr.get("/",function(req,res){
     console.log(" Esangtek Manager Server is working.");
     
     res.send(" Esangtek Manager Server is working...");
-    res.end();
+    //res.end();
 });
 
 esangMgr.listen(8080, function () {
