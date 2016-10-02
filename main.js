@@ -5,30 +5,16 @@
  * 
  */
 console.log(" Starting Esangtek Manager System... ");
-//
-require({
-  paths: {
-    "order": "library/requirejs/order",
-    "lib": "library"
-  }
+
+var express = require("express");
+var esangMgr=express();
+
+esangMgr.get("/",function(req,res){
+    console.log(" Esangtek Manager Server is working.");
+    
+    res.send(" Esangtek Manager Server is working...");
+    res.end();
 });
 
-/*
-require([
-    "order!bower_components/jquery/dist/jquery.js",
-    'order!library/underscore/underscore.js',
-    "order!library/backbone/backbone.js",
-], function ($, _, Backbone){});
-*/
-
-//
-require([
-    //"order!systems/esController.js",
-    "order!systems/esView.js",
-    
-],function(esView){
-    console.log(" EMS 啟動！ ");
-    
-    
+esangMgr.listen(8080, function () {
 });
-
