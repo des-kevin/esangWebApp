@@ -1,0 +1,6 @@
+/* 
+    Created on : 2016/10/4, 下午 04:31:48
+    Author     : kevin
+*/
+body{font: 14px  JhengHei, Helvetica, Arial, sans-serif;    background: #eeeeee;    color: #333333;    width: 100%; min-height: 500px;    margin: 0 auto;    -webkit-font-smoothing: antialiased;}
+footer {display: none;	margin: 0 -20px -20px -20px;overflow: hidden;	color: #555555;background: #f4fce8;border-top: 1px solid #ededed;padding: 0 20px;line-height: 37px;-webkit-border-radius: 0 0 5px 5px;-moz-border-radius: 0 0 5px 5px;-ms-border-radius: 0 0 5px 5px;-o-border-radius: 0 0 5px 5px;border-radius: 0 0 5px 5px;}

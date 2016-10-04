@@ -27,6 +27,6 @@ require([
 ],function(esView){
     console.log(" EMS 啟動！ ");
     
-    
+        esView.display();
 });
 

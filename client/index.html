@@ -6,9 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="library/requirejs/require.js"></script>
         <script type="text/javascript" src="index.js"></script>
-        
+        <link rel="stylesheet" href="template/css/template.css">
     </head>
     <body>
-        <div>TODO write content</div>
+    <div id="esContent">
+        
+        
+          <footer>
+            <a id="clear-completed">Clear completed</a>
+            <div id="todo-count"></div>
+          </footer>
+        
+        
+        <script type="text/template" id="item-template">
+            <div class="view">
+              <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+              <label><%- title %></label>
+              <a class="destroy"></a>
+            </div>
+            <input class="edit" type="text" value="<%- title %>" />
+          </script>
+    </div>
     </body>
+    
 </html>
